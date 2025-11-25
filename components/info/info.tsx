@@ -21,7 +21,7 @@ function Info() {
             Bringing you the <span className="text-accent-strong">best</span>{" "}
             audio gear
           </h2>
-          <p className="tracking-wide opacity-70 sm:max-w-[65ch]">
+          <p className="px-2 tracking-wide opacity-70 sm:max-w-[65ch] lg:px-0">
             Located at the heart of New York City, Audiophile is the premier
             store for high end headphones, earphones, speakers, and audio
             accessories. We have a large showroom and luxury demonstration rooms

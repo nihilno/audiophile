@@ -7,9 +7,11 @@ export default function HomePage() {
   return (
     <section>
       <Hero />
-      <Categories />
-      <Featured />
-      <Info />
+      <div className="mx-auto max-w-480">
+        <Categories />
+        <Featured />
+        <Info />
+      </div>
     </section>
   );
 }

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manropeFont.className} text-[15px] antialiased`}>
-        <main className="mx-auto flex min-h-dvh max-w-[1920px] flex-col">
+        <main className="flex min-h-dvh flex-col">
           <Header />
           {children}
           <Footer />

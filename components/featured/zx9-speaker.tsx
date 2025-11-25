@@ -11,7 +11,7 @@ function Zx9Speaker() {
           src={FeaturedSpeakerImage}
           alt="ZX9 Speaker"
           fill
-          className="-translate-y-35 scale-50 object-contain transition-transform ease-in-out md:-translate-y-40 xl:-translate-x-75 xl:translate-y-15 xl:scale-100"
+          className="-translate-y-35 scale-50 object-contain transition-transform ease-in-out md:-translate-y-50 md:scale-65 xl:-translate-x-75 xl:translate-y-15 xl:scale-100"
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 40vw"
         />
       </div>
