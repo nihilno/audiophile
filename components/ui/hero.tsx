@@ -1,6 +1,6 @@
+import { Button } from "@/components/ui/button";
 import HeroImage from "@/public/images/hero/Hero.png";
 import Image from "next/image";
-import { Button } from "./button";
 
 function Hero() {
   return (

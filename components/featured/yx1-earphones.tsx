@@ -1,6 +1,6 @@
+import { Button } from "@/components/ui/button";
 import FeaturedEarphoneImage from "@/public/images/featured/image-earphone-yx1.jpg";
 import Image from "next/image";
-import { Button } from "../ui/button";
 
 function Yx1Earphones() {
   return (

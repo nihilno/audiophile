@@ -1,10 +1,12 @@
+"use client";
+
+import Logo from "@/components/global/logo";
+import { Button } from "@/components/ui/button";
 import { padding } from "@/lib/constants";
 import { navLinks } from "@/lib/links";
 import { cn } from "@/lib/utils";
 import { Facebook, Instagram, Menu, ShoppingCart, Twitter } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import Logo from "./logo";
 
 import {
   Sheet,
@@ -15,19 +17,22 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useState } from "react";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="bg-primary/99 sticky top-0 z-100! border-b border-dashed border-white/20">
       <div
         className={cn(
-          "mx-auto flex max-w-480 items-center justify-between py-8 text-white shadow-2xl md:py-10",
+          "mx-auto flex h-[90px] max-w-480 items-center justify-between text-white shadow-2xl md:py-10",
           padding,
         )}
       >
         <div className="relative flex w-full items-center sm:gap-6 md:flex-row-reverse">
           <nav>
-            <Sheet>
+            <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger>
                 <Button
                   variant="ghost"
@@ -42,7 +47,7 @@ function Header() {
                 side="left"
                 className="bg-primary/97 text-popover w-85 border-dashed border-white/20 px-6"
               >
-                <SheetHeader className="mt-16">
+                <SheetHeader className="mt-24">
                   {navLinks.map((link) => (
                     <div
                       key={link.label}
@@ -52,6 +57,7 @@ function Header() {
                         <Link
                           href={link.href}
                           className="flex items-center gap-2"
+                          onClick={() => setOpen(false)}
                         >
                           {link.icon}
                           <span>{link.label}</span>

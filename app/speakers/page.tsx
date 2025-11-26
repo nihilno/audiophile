@@ -1,3 +1,15 @@
+import Categories from "@/components/categories/categories";
+import Info from "@/components/info/info";
+import Speakers from "@/components/products/speakers/speakers";
+
 export default function SpeakersPage() {
-  return <h1>SpeakersPage</h1>;
+  return (
+    <section className="scroll-mt-[90px]">
+      <Speakers />
+      <div className="mx-auto max-w-480">
+        <Categories />
+        <Info />
+      </div>
+    </section>
+  );
 }

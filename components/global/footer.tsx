@@ -1,16 +1,16 @@
+import Logo from "@/components/global/logo";
 import { padding } from "@/lib/constants";
 import { navLinks } from "@/lib/links";
 import { cn } from "@/lib/utils";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
-import Logo from "./logo";
 
 function Footer() {
   return (
-    <footer className="bg-primary relative border-t border-dashed border-white/20">
+    <footer className="bg-primary relative mt-auto border-t border-dashed border-white/20">
       <div
         className={cn(
-          "bg-primary mx-auto mt-auto flex max-w-480 flex-col items-center py-16 text-center text-white md:items-start md:text-left",
+          "bg-primary mx-auto flex max-w-480 flex-col items-center py-16 text-center text-white md:items-start md:text-left",
           padding,
         )}
       >
@@ -32,7 +32,7 @@ function Footer() {
           Audiophile is an all in one stop to fulfill your audio needs.
           We&apos;re a small team of music lovers and sound specialists who are
           devoted to helping you get the most out of personal audio. Come and
-          visit our demo facility - we’re open 7 days a week.
+          visit our demo facility - we&apos;re open 7 days a week.
         </p>
         <div className="mt-12 flex flex-col items-center gap-8 md:mt-16 md:w-full md:flex-row md:justify-between">
           <div className="flex items-center gap-6">

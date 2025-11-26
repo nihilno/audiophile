@@ -46,6 +46,7 @@
   --color-accent-light: #e63a47;
   --color-featured: rgb(191, 199, 199);
   --color-featured2: rgb(23, 23, 23);
+  --color-product-bg: rgb(242, 242, 242);
 }
 
 :root {

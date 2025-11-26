@@ -7,13 +7,14 @@ function Info() {
   return (
     <div className={cn("", padding)}>
       <div className="my-32 grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:items-center lg:gap-x-8">
-        <div className="relative h-75 overflow-hidden rounded-md border lg:order-2 lg:h-[588px]">
+        <div className="relative h-75 overflow-hidden rounded-md lg:order-2 lg:h-[588px]">
           <Image
             src={InfoImage}
             alt="Info"
             fill
-            className="object-cover"
             placeholder="blur"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
           />
         </div>
         <article className="flex flex-col items-center gap-10 text-center lg:items-start lg:text-left">

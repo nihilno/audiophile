@@ -5,7 +5,7 @@ import Hero from "@/components/ui/hero";
 
 export default function HomePage() {
   return (
-    <section>
+    <section className="scroll-mt-[90px]">
       <Hero />
       <div className="mx-auto max-w-480">
         <Categories />
