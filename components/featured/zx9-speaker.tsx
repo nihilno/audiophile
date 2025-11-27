@@ -36,7 +36,10 @@ function Zx9Speaker() {
             truly remarkable sound.
           </p>
           <Link href="products/zx9-speaker">
-            <Button className="bg-primary hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] tracking-[1px] uppercase transition-all duration-300 hover:scale-110">
+            <Button
+              variant="secondary"
+              className="mt-4 h-12 rounded-none px-8 text-[13px] tracking-[1px] uppercase transition-all duration-300 hover:scale-110"
+            >
               See Product
             </Button>
           </Link>

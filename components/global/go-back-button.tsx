@@ -14,7 +14,7 @@ function GoBackButton() {
     <Button
       onClick={handleGoBack}
       variant="ghost"
-      className="p-0 text-[15px] leading-[25px] text-black/50 capitalize"
+      className="p-0 text-[15px] leading-[25px] text-black/50 capitalize underline"
     >
       Go back
     </Button>

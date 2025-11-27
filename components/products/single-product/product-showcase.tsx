@@ -80,7 +80,7 @@ function ProductShowcase({ product }: { product: Product }) {
           </div>
           <Button
             type="button"
-            className="bg-accent-strong hover:bg-accent-st h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]"
+            className="bg-accent-strong h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]"
           >
             Add to cart
           </Button>

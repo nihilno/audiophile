@@ -28,7 +28,11 @@ function NotFound() {
           <RotateCw /> <span>Reload</span>
         </Button>
         <Link href="/">
-          <Button size="lg">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="bg-primary text-white"
+          >
             <Home /> <span>Go Home</span>
           </Button>
         </Link>

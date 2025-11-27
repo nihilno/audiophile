@@ -96,9 +96,16 @@ function Header() {
             <Logo />
           </div>
         </div>
-        <Button variant="ghost" size="icon" asChild>
-          <ShoppingCart color="white" className="h-6 w-6" />
-        </Button>
+        <Link href="/checkout">
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="hover:opacity-70"
+          >
+            <ShoppingCart color="white" className="h-6 w-6" />
+          </Button>
+        </Link>
       </div>
     </header>
   );

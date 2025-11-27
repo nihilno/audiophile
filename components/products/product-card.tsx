@@ -31,7 +31,7 @@ function ProductCard({ item }: { item: ProductCardProp }) {
           {item.description}
         </p>
         <Link href={`products/${item.slug}`}>
-          <Button className="bg-accent-strong hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
+          <Button className="bg-accent-strong mt-4 h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
             See Product
           </Button>
         </Link>

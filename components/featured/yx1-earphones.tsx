@@ -24,7 +24,10 @@ function Yx1Earphones() {
           </h2>
 
           <Link href="/products/yx1-earphones">
-            <Button className="hover:bg-accent-st bg-0 mt-4 h-12 rounded-none border border-black px-8 text-[13px] font-bold tracking-[1px] text-black uppercase transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white">
+            <Button
+              variant="outline"
+              className="bg-0 mt-4 h-12 rounded-none border border-black px-8 text-[13px] font-bold tracking-[1px] text-black uppercase transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white"
+            >
               See Product
             </Button>
           </Link>
