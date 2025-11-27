@@ -44,7 +44,7 @@ function ConnectedProduct({
         {product.name}
       </h3>
       <Link href={product.slug}>
-        <Button className="bg-accent-strong h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
+        <Button className="bg-accent-strong h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:shadow-[0_4px_20px_#dc143c]">
           See Product
         </Button>
       </Link>

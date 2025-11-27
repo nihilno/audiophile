@@ -1,6 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { padding } from "@/lib/constants";
 import { cn, formatPrice } from "@/lib/utils";
-import { Button } from "../ui/button";
 
 function CheckoutSummary() {
   return (
@@ -55,7 +55,7 @@ function CheckoutSummary() {
         </div>
         <Button
           type="submit"
-          className="bg-accent-strong mt-2 h-12 w-full rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]"
+          className="bg-accent-strong mt-2 h-12 w-full rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:shadow-[0_4px_20px_#dc143c]"
         >
           Continue & Pay
         </Button>

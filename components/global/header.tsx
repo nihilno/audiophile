@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { padding } from "@/lib/constants";
 import { navLinks } from "@/lib/links";
 import { cn } from "@/lib/utils";
-import { Facebook, Instagram, Menu, ShoppingCart, Twitter } from "lucide-react";
+import { Facebook, Instagram, Menu, Twitter } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -18,6 +18,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import CartButton from "./cart-button";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -96,16 +97,7 @@ function Header() {
             <Logo />
           </div>
         </div>
-        <Link href="/checkout">
-          <Button
-            variant="ghost"
-            size="icon"
-            asChild
-            className="hover:opacity-70"
-          >
-            <ShoppingCart color="white" className="h-6 w-6" />
-          </Button>
-        </Link>
+        <CartButton />
       </div>
     </header>
   );
