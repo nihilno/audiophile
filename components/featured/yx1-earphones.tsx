@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import FeaturedEarphoneImage from "@/public/images/featured/image-earphone-yx1.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 function Yx1Earphones() {
   return (
@@ -22,9 +23,11 @@ function Yx1Earphones() {
             YX1 Earphones
           </h2>
 
-          <Button className="hover:bg-accent-st bg-0 mt-4 h-12 rounded-none border border-black px-8 text-[13px] font-bold tracking-[1px] text-black uppercase transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white">
-            See Product
-          </Button>
+          <Link href="/products/yx1-earphones">
+            <Button className="hover:bg-accent-st bg-0 mt-4 h-12 rounded-none border border-black px-8 text-[13px] font-bold tracking-[1px] text-black uppercase transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white">
+              See Product
+            </Button>
+          </Link>
         </div>
       </article>
     </div>

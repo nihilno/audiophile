@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import FeaturedSpeakerImage from "@/public/images/featured/image-speaker-zx7.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 function Zx7Speaker() {
   return (
@@ -22,9 +23,11 @@ function Zx7Speaker() {
             ZX7 Speaker
           </h2>
 
-          <Button className="hover:bg-accent-st bg-0 mt-4 h-12 rounded-none border border-black px-8 text-[13px] font-bold tracking-[1px] text-black uppercase transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white">
-            See Product
-          </Button>
+          <Link href="/products/zx7-speaker">
+            <Button className="hover:bg-accent-st bg-0 mt-4 h-12 rounded-none border border-black px-8 text-[13px] font-bold tracking-[1px] text-black uppercase transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white">
+              See Product
+            </Button>
+          </Link>
         </div>
       </article>
     </div>

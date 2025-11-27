@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import HeroImage from "@/public/images/hero/Hero.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -28,9 +29,11 @@ function Hero() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Button className="bg-accent-strong hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
-              See Product
-            </Button>
+            <Link href="products/xx99-mark-two-headphones">
+              <Button className="bg-accent-strong hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
+                See Product
+              </Button>
+            </Link>
           </div>
         </article>
       </div>

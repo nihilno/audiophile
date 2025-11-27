@@ -1,5 +1,6 @@
 import Footer from "@/components/global/footer";
 import Header from "@/components/global/header";
+import ScrollToTop from "@/components/global/scroll-to-top";
 import { manropeFont } from "@/lib/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className={`${manropeFont.className} text-[15px] antialiased`}>
         <main className="flex min-h-dvh flex-col">
           <Header />
+          <ScrollToTop />
           {children}
           <Footer />
         </main>

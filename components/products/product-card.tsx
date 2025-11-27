@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ProductCardProp } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 function ProductCard({ item }: { item: ProductCardProp }) {
   return (
     <div className="grid grid-cols-1 items-center gap-y-10 md:grid-cols-2 md:gap-x-8 lg:gap-x-16 xl:gap-32">
       <div
         className={cn(
-          item.id === 2 ? "order-2" : "",
+          item.id === 2 ? "md:order-2" : "",
           "bg-product-bg relative h-[352px] rounded-md shadow-sm md:h-100 lg:h-120 xl:h-140",
         )}
       >
@@ -16,7 +17,6 @@ function ProductCard({ item }: { item: ProductCardProp }) {
           src={item.image}
           alt={item.title}
           fill
-          placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
           className="mx-auto max-w-100 object-cover"
         />
@@ -30,9 +30,11 @@ function ProductCard({ item }: { item: ProductCardProp }) {
         <p className="max-w-[38ch] tracking-wide opacity-70 sm:max-w-[60ch]">
           {item.description}
         </p>
-        <Button className="bg-accent-strong hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
-          See Product
-        </Button>
+        <Link href={`products/${item.slug}`}>
+          <Button className="bg-accent-strong hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:scale-107 hover:shadow-[0_4px_20px_#dc143c]">
+            See Product
+          </Button>
+        </Link>
       </article>
     </div>
   );

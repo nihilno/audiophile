@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import FeaturedSpeakerImage from "@/public/images/featured/image-category-page-preview.png";
 import PatterCirclesImage from "@/public/images/global/pattern-circles.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 function Zx9Speaker() {
   return (
@@ -34,9 +35,11 @@ function Zx9Speaker() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Button className="bg-primary hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] tracking-[1px] uppercase transition-all duration-300 hover:scale-110">
-            See Product
-          </Button>
+          <Link href="products/zx9-speaker">
+            <Button className="bg-primary hover:bg-accent-st mt-4 h-12 rounded-none px-8 text-[13px] tracking-[1px] uppercase transition-all duration-300 hover:scale-110">
+              See Product
+            </Button>
+          </Link>
         </div>
       </article>
     </div>
