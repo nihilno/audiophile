@@ -7,7 +7,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Audiophile",
+  title: {
+    template: "%s | Audiophile",
+    default: "Home | Audiophile",
+  },
 };
 
 export default function RootLayout({

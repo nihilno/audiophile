@@ -2,6 +2,11 @@ import CheckoutForm from "@/components/checkout/checkout-form";
 import GoBackButton from "@/components/global/go-back-button";
 import { padding } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Checkout",
+};
 
 export default function Checkout() {
   return (
