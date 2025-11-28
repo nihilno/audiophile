@@ -45,3 +45,11 @@ export type OtherProduct = {
 export type CheckoutFieldsProps = {
   form: UseFormReturn<CheckoutFormData>;
 };
+
+export type CartItem = {
+  id: number | string;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+};

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useCart } from "@/contexts/cart-context";
 import { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/utils";
 import { Minus, Plus } from "lucide-react";
@@ -10,6 +11,7 @@ import { useState } from "react";
 
 function ProductShowcase({ product }: { product: Product }) {
   const [amount, setAmount] = useState(1);
+  const { addToCart } = useCart();
 
   function handleAmount(value: number) {
     const newValue = amount + value;
@@ -80,6 +82,7 @@ function ProductShowcase({ product }: { product: Product }) {
           </div>
           <Button
             type="button"
+            onClick={() => addToCart({ ...product, quantity: 1 }, amount)}
             className="bg-accent-strong h-12 rounded-none px-8 text-[13px] font-bold tracking-[1px] uppercase transition-all duration-300 hover:shadow-[0_4px_20px_#dc143c]"
           >
             Add to cart

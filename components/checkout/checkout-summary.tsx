@@ -1,8 +1,17 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { cartLength, padding } from "@/lib/constants";
+import { useCart } from "@/contexts/cart-context";
+import { padding, SHIPPING } from "@/lib/constants";
 import { cn, formatPrice } from "@/lib/utils";
+import Image from "next/image";
 
 function CheckoutSummary() {
+  const { cart } = useCart();
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const vat = Math.round(total * 0.05);
+  const grandTotal = total + SHIPPING + vat;
+
   return (
     <div
       className={cn(
@@ -17,17 +26,26 @@ function CheckoutSummary() {
         </h2>
 
         <div className="space-y-5 border-b border-dashed pb-3.5">
-          {Array.from({ length: cartLength }, (_, index) => (
-            <div key={index} className="grid grid-cols-[64px_1fr] gap-x-4">
-              <div className="bg-product-bg h-16 w-16 rounded-md"></div>
+          {cart.map((item) => (
+            <div key={item.id} className="grid grid-cols-[64px_1fr] gap-x-4">
+              <div className="bg-product-bg relative h-16 w-16 rounded-md">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="overflow-hidden rounded-md object-cover"
+                />
+              </div>
               <div className="flex justify-between py-1.5">
                 <div className="flex flex-col">
-                  <p className="font-bold">XX 99 MK II</p>
+                  <p className="line-clamp-1 pr-2 font-bold">{item.name}</p>
                   <p className="text-[14px] font-bold opacity-50">
-                    {formatPrice(2999)}
+                    {formatPrice(item.price)}
                   </p>
                 </div>
-                <span className="text-[15px] font-bold opacity-50">x1</span>
+                <span className="text-[15px] font-bold opacity-50">
+                  x{item.quantity}
+                </span>
               </div>
             </div>
           ))}
@@ -36,20 +54,20 @@ function CheckoutSummary() {
         <div className="space-y-2 border-b border-dashed pb-2">
           <div className="flex items-center justify-between">
             <p className="font-medium uppercase opacity-45">Total</p>
-            <p className="text-[18px] font-bold">{formatPrice(5369)}</p>
+            <p className="text-[18px] font-bold">{formatPrice(total)}</p>
           </div>
           <div className="flex items-center justify-between">
             <p className="font-medium uppercase opacity-45">Shipping</p>
-            <p className="text-[18px] font-bold">{formatPrice(50)}</p>
+            <p className="text-[18px] font-bold">{formatPrice(SHIPPING)}</p>
           </div>
           <div className="flex items-center justify-between">
             <p className="font-medium uppercase opacity-45">Vat (Included)</p>
-            <p className="text-[18px] font-bold">{formatPrice(1079)}</p>
+            <p className="text-[18px] font-bold">{formatPrice(vat)}</p>
           </div>
           <div className="mt-6 flex items-center justify-between">
             <p className="font-medium uppercase opacity-45">Grand Total</p>
             <p className="text-accent-strong text-[18px] font-bold">
-              {formatPrice(5446)}
+              {formatPrice(grandTotal)}
             </p>
           </div>
         </div>
