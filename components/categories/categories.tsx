@@ -24,7 +24,7 @@ function Categories() {
   return (
     <div
       className={cn(
-        "mt-26 flex flex-col items-center gap-20 md:flex-row md:justify-between md:gap-10",
+        "mt-48 flex flex-col items-center gap-20 md:flex-row md:justify-between md:gap-10",
         padding,
       )}
     >
