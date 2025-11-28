@@ -1,4 +1,6 @@
+import { CheckoutFormData } from "@/lib/schemas";
 import { StaticImageData } from "next/image";
+import type { UseFormReturn } from "react-hook-form";
 
 export type ProductCardProp = {
   id: number;
@@ -38,4 +40,8 @@ export type OtherProduct = {
   slug: string;
   name: string;
   image: string;
+};
+
+export type CheckoutFieldsProps = {
+  form: UseFormReturn<CheckoutFormData>;
 };

@@ -29,7 +29,7 @@ function CartButton() {
           variant="ghost"
           size="icon"
           asChild
-          className="relative hover:opacity-80"
+          className="relative scale-120 hover:opacity-80 md:scale-130"
         >
           <div>
             <ShoppingCart color="white" className="h-6 w-6" />

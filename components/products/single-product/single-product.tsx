@@ -1,12 +1,12 @@
+import ProductFeatures from "@/components/products/single-product/product-features";
+import ProductImages from "@/components/products/single-product/product-images";
+import ProductShowcase from "@/components/products/single-product/product-showcase";
+import ProductsConnected from "@/components/products/single-product/products-connected";
 import { Button } from "@/components/ui/button";
 import productsData from "@/public/data.json";
 import { AlertCircle, Home } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ProductFeatures from "./product-features";
-import ProductImages from "./product-images";
-import ProductShowcase from "./product-showcase";
-import ProductsConnected from "./products-connected";
 
 function SingleProduct({ slug }: { slug: string }) {
   const products = productsData;

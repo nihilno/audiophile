@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { padding } from "@/lib/constants";
+import { cartLength, padding } from "@/lib/constants";
 import { cn, formatPrice } from "@/lib/utils";
 
 function CheckoutSummary() {
@@ -17,7 +17,7 @@ function CheckoutSummary() {
         </h2>
 
         <div className="space-y-5 border-b border-dashed pb-3.5">
-          {Array.from({ length: 3 }, (_, index) => (
+          {Array.from({ length: cartLength }, (_, index) => (
             <div key={index} className="grid grid-cols-[64px_1fr] gap-x-4">
               <div className="bg-product-bg h-16 w-16 rounded-md"></div>
               <div className="flex justify-between py-1.5">

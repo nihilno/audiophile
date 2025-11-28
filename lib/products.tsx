@@ -1,11 +1,9 @@
+import EarphoneOneImage from "@/public/images/products/earphones/earphones-1.jpg";
 import HeadphoneOneImage from "@/public/images/products/headphones/headphones-1.jpg";
 import HeadphoneTwoImage from "@/public/images/products/headphones/headphones-2.jpg";
 import HeadphoneThreeImage from "@/public/images/products/headphones/headphones-3.jpg";
-
 import SpeakerOneImage from "@/public/images/products/speakers/speaker-1.jpg";
 import SpeakerTwoImage from "@/public/images/products/speakers/speaker-2.jpg";
-
-import EarphoneOneImage from "@/public/images/products/earphones/earphones-1.jpg";
 
 export const headphones = [
   {
